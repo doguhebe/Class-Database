@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>HW3 Database</title>
+</head>
+<body>
+	<h1><u>Student Database</u></h1>
+		<form method="post">
+			{{form.hidden_tag()}}
+			{{form.name.label}} {{form.name}}
+			<br>
+			{{form.grade.label}} {{form.grade}}
+			<br>
+			{{form.submit()}}
+		</form>
+
+		<br>
+
+		<h2><u>All Students</u></h2>
+		<button type="button" onclick="window.location.href='{{url_for('allStudents')}}';">List of Students</button>
+		<br>
+		<br>
+		<h2><u>Passing Students</u></h2>
+		<button type = "button" onclick = "window.location.href='{{url_for('passFail')}}'; ">Passing Students</button>
+		<br>
+		<br>
+		<h2><u>Delete Entry</u></h2>
+
+
+</body>
+</html>
